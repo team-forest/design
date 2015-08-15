@@ -10,7 +10,16 @@ body{
 	*{
 		box-sizing:border-box;
 	}
+	a{
+		text-decoration: none;
+	}
 }
+
+//Variables
+$color-easy:#9fdc6e;
+$color-med:#f2c54c;
+$color-hard:#e44e1a;
+$color-crazy:#a91b14;
 
 //Typography
 body{
@@ -45,7 +54,7 @@ div#dashboard{
 			position: relative;
 		}
 		.lvl{
-			background:#eee;
+			background:#b0f50c;
 			border-radius:50%;
 			width:70px;
 			height: 70px;
@@ -84,9 +93,145 @@ div#dashboard{
 	//Main Section
 	section#main{
 		min-height: 735px;
-		border-left:1px solid #ddd;
+		border-left:1px solid #eee;
 		flex:7;
+		.content{
+			padding:40px;
+		}
+		nav.filter{
+			h3{
+				float:left;
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 0.1rem;
+				font-size:1.1rem;
+				margin-top:10px;
+			}
+			ul{
+				text-align: right;
+				border-bottom:1px solid #eee;
+				padding-bottom:25px;
+			}
+			li{
+				display: inline;
+				font-size:0.8rem;
+				margin-right:6px;
+			}
+			li:first-child{
+				margin-right: 15px;
+			}
+			a{
+				padding:8px 12px;
+				background:#ddd;
+				text-decoration: none;
+				border-radius:7px;
+				color:#fff;
+				&:hover{
+					text-decoration: underline;
+				}
+				&.esy{
+					background:$color-easy;
+				}
+				&.med{
+					background:$color-med;
+				}
+				&.hrd{
+					background:$color-hard;
+				}
+				&.crz{
+					background:$color-crazy;
+				}
+			}
+		}
+		//End nav.filter
+		
+		section.challenge-list{
+			ul{
+				padding:25px 0;
+			}
+			li{
+				border:1px solid;
+				border-radius: 7px;
+				float:left;
+				width:100%;
+				margin-bottom:7px;
+				position:relative;
+				
+				em{
+					position:absolute;
+					height:15px;
+					text-indent: -9999px;
+					bottom:10px;
+					left:82px;
+					background:url(../images/icons/1star.png) repeat-x;
+				}
+
+				&.esy{
+					border-color: $color-easy;
+					em{
+						
+						width:14px;
+					}
+					h4{background:$color-easy;}
+				}
+				&.med{
+					border-color: $color-med;
+					em{
+						background:url(../images/icons/1star.png);
+						width:28px;
+					}
+					h4{background:$color-med;}
+				}
+				&.hrd{
+					border-color: $color-hard;
+					em{
+						background:url(../images/icons/1star.png);
+						width:42px;
+					}
+					h4{background:$color-hard;}
+				}
+				&.crz{
+					border-color: $color-crazy;
+					em{
+						background:url(../images/icons/1star.png);
+						width:70px;
+					}
+					h4{background:$color-crazy;}
+				}
+			}
+			h4{
+				float:left;
+				padding:20px 25px ;
+				margin-right: 15px;
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+				font-weight: 700;
+				color:#fff;
+				width:68px;
+				font-size:1.4rem;
+			}
+			p{
+				padding:16px 0 13px;
+				float:left;
+			}
+			a.send{
+				float:right;
+				font-size:0.6rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				background:#7dc6db;
+				padding:18px 12px 17px;
+				margin:9px 8px 0 0;
+				border-radius: 7px;
+				letter-spacing: 0.1rem;
+				color:#fff;
+				&:hover{
+					background:#58b5cf;
+				}
+			}
+		}
 	}
+	//End section#main
 }
 
 footer{
