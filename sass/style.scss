@@ -3,7 +3,100 @@
 // Team Members - Ralph Sutacio, Rick Tungol, Jan Harold Diaz
 
 @import 'thirds'; //Third party codes such as resets
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,400,600,700);
 
+//Globals
 body{
-	
+	*{
+		box-sizing:border-box;
+	}
+}
+
+//Typography
+body{
+	font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.container{
+
+}
+
+header{
+
+}
+
+//Dashboard
+div#dashboard{
+	width:100%;
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	//Sidebar for Profile
+	aside{
+		flex:3;
+		//background: url(../images/bg/sidebar.jpg);
+		//background-size: 100% 200px;
+		//background-repeat: no-repeat;
+		text-align: center;
+		padding: 30px 30px;
+		
+		//Headshot
+		.headshot{
+			position: relative;
+		}
+		.lvl{
+			background:#eee;
+			border-radius:50%;
+			width:70px;
+			height: 70px;
+			padding-top:15px;
+			.lbl{
+				font-size:0.7rem;
+				font-weight: 300;
+				letter-spacing: 0.1rem;
+				text-transform: uppercase;
+			}
+			.num{
+				font-size:2rem;
+				font-weight: 700;
+			}
+		}
+
+
+		.user-img{
+			width:220px;
+			border-radius: 50%;
+			border:5px solid #ccc;
+			margin:15px;
+		}
+		h1{
+			font-size: 1.4rem;
+			letter-spacing: 0.2rem;
+			margin-bottom:7px; 
+		}
+		h2{
+			color:#555;
+			font-size:0.8rem;
+			letter-spacing: 0.3rem;
+			text-transform: uppercase;
+		}
+	}
+	//Main Section
+	section#main{
+		min-height: 735px;
+		border-left:1px solid #ddd;
+		flex:7;
+	}
+}
+
+footer{
+	width:100%;
+	bottom: 0;
+	border-top:1px solid #eee;
+	text-align: right;
+	padding:12px 35px;
+	small{
+		color:#888;
+		font-size:0.9rem;
+	}
 }
