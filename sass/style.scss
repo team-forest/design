@@ -23,6 +23,8 @@ $color-hard:#e44e1a;
 $color-crazy:#a91b14;
 $color-send:#7dc6db;
 $color-done:#4fc127;
+$color-error:#e52a2a;
+$color-brand:#4c33ca;
 //Typography
 body{
 	font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
@@ -34,7 +36,42 @@ body{
 }
 
 header{
-
+	width:100%;
+	min-width: 1220px;
+	float:left;
+	background:$color-brand;
+	.logo{
+		padding:15px 20px;
+		img{
+			height: 20px;
+		}
+		float:left;
+	}
+	nav{
+		text-align: right;
+	}
+	ul{
+		float:right;
+	}
+	li{
+		display: inline-block;
+		float:left;
+	}
+	li a{
+		float:left;
+		display: block;
+		padding:19px;
+		color:#d4cbff;
+		font-size:0.9rem;
+		border-left:1px solid #5e46d6;
+		&:hover{
+			background:#5e46d6;
+			color:#fff;
+		}
+	}
+	li.noti a{
+		padding:1px 8px;
+	}
 }
 
 //Dashboard
@@ -146,7 +183,7 @@ div#dashboard{
 
 	//Main Section
 	section#main{
-		min-height: 735px;
+		min-height: 635px;
 		border-left:1px solid #eee;
 		flex:7;
 		
@@ -165,17 +202,20 @@ div#dashboard{
 				em{
 					font-size:0.7rem;
 					color:#999;
-					margin-left:15px;
 					&.completed{
 						color:$color-done;
+					}
+					&.failed{
+						color:$color-error;
 					}
 				}
 			}
 			
 			ul{
+				padding-top:10px;
 				text-align: right;
 				border-bottom:1px solid #eee;
-				padding-bottom:25px;
+				padding-bottom:30px;
 				margin-right: 15px;
 			}
 			
@@ -343,6 +383,23 @@ div#dashboard{
 				padding:16px 0 13px;
 				font-weight: 600;
 				float:left;
+			}
+			
+			span.status{
+				float:right;
+				padding:25px 25px 0;
+				letter-spacing: 0.10rem;
+				font-size: 0.7rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				
+				&.completed{
+					color:$color-done;
+				}
+				
+				&.failed{
+					color:$color-error;
+				}
 			}
 
 			a.btn{
