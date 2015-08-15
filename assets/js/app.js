@@ -24,6 +24,26 @@
 			});
 	}
 
+	function showNotification(){
+		$('.notification-list')
+			.transition({
+				x:'420'
+			});
+	}
+	function hideNotification(){
+		$('.notification-list')
+			.transition({
+				x:'0'
+			});
+	}
+
+	$('.show-noti').click(function(){
+		showNotification();
+	});
+	$('.hide-noti').click(function(){
+		hideNotification();
+	});
+
 	$('.mark-done').click(function(){
 		reduceItem($(this).parent());
 		$(this).parent().fadeOut();
