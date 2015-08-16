@@ -92,6 +92,7 @@ div#dashboard{
 	display: flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
+	margin:0 auto;
 	//Sidebar for Profile
 	aside{
 		flex:3;
@@ -567,13 +568,13 @@ footer{
 	background-size: 1200px;
 	min-width: 1220px;
 	background-position: right top;
-	div{
+	div.content{
 		padding:120px;
 		color:#fff;
 		img{background: $color-brand; padding:20px;}
 		h1{
 			background:$color-brand;
-			width:500px;
+			width:460px;
 			font-size:1.5rem;
 			padding:20px;
 			margin-top:-15px;
