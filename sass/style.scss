@@ -260,7 +260,7 @@ div#dashboard{
 
 	//Main Section
 	section#main{
-		min-height: 405px;
+		min-height: 605px;
 		border-left:1px solid #eee;
 		flex:7;
 		
@@ -595,7 +595,7 @@ footer{
 
 //Modal Box
 #modal{
-	position:absolute;
+	position:fixed;
 	z-index: 100;
 	background:rgba(#fff, 0.85);
 	width:100%;
